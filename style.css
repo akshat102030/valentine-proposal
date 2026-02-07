@@ -353,8 +353,10 @@ button:hover {
     }
 
     #btn-no {
-        position: fixed;
         font-size: 0.9rem;
         padding: 8px 20px;
+        /* position: fixed removed so it sits in flow initially */
+        transition: all 0.5s ease;
+        /* Ensure transition exists */
     }
 }
