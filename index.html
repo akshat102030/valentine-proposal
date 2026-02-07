@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Anshi ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+  <div id="app">
+    <!-- Scene 1: Intro -->
+    <div id="scene-intro" class="scene active">
+      <h1>For Anshi 💖</h1>
+      <p>A little something special just for you, my love.</p>
+      <button onclick="nextScene('scene-memories')">Enter ❤️</button>
+    </div>
+
+    <!-- Scene 2: Memories -->
+    <div id="scene-memories" class="scene">
+      <h1>Will you be my Valentine baby girl</h1>
+      <div class="gallery" id="gallery-container">
+        <!-- JS will populate images here -->
+      </div>
+      <p style="margin-top: 2rem;">Every memory with you is my favorite.</p>
+      <button onclick="nextScene('scene-declaration')" style="margin-top: 20px;">Next 🌸</button>
+    </div>
+
+    <!-- Scene 3: Declaration -->
+    <div id="scene-declaration" class="scene">
+      <h1 id="typewriter-text" class="aesthetic-cursive"></h1>
+      <!-- The text "I Love You, Anshi..." will be typed here -->
+      <button onclick="nextScene('scene-proposal')" id="btn-reveal" style="display:none; margin-top: 30px;">One last
+        question... 💌</button>
+    </div>
+
+    <div id="scene-proposal" class="scene">
+      <h1>Will you be my girlfriend for life? 💖</h1>
+      <div class="proposal-buttons">
+        <button id="btn-yes" onclick="handleYesClick()">YES 💘</button>
+        <button id="btn-no" onmouseover="moveNoButton()" onclick="moveNoButton()" ontouchstart="moveNoButton()">NO
+          💔</button>
+      </div>
+    </div>
+
+    <!-- Scene 5: Celebration -->
+    <div id="scene-celebration" class="scene">
+      <h1>🎉 Congratulations! 🎉</h1>
+      <p class="aesthetic-serif">Now you are Akshat’s girl 💍<br>Happy Propose Day Baby ❤️</p>
+    </div>
+  </div>
+
+  <audio id="bg-music" loop>
+    <source src="assets/music/bgm.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
